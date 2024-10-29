@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fertilizer Recommendation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(225, 217, 217, 0.837);
+            margin: 0;
+            padding: 0;
+        }
+
+        .heading {
+            text-align: center;
+            color: rgb(44, 18, 18);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #eeedd8;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #326b34;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+            box-shadow: 0, .5rem 1rem black;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 2px solid rgb(111, 122, 102);
+            border-radius: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #5dc961;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #115214;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Fertilizer Recommendation System</h1>
+
+    <form method="post" action="/predict3">
+        <label>Nitrogen</label><br>
+        <input type="text" name="Nitrogen"><br><br>
+
+        <label>Potassium</label><br>
+        <input type="text" name="Potassium"><br><br>
+
+        <label>Phosphorous</label><br>
+        <input type="text" name="Phosphorous"><br><br>
+
+        <button type="submit" value="predict3">Get Recommendation</button>
+
+        {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    </form>
+
+</body>
+</html>

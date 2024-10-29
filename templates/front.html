@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural advice</title>
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--Style CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_amc.css') }}">
+</head>
+
+<body>
+    <header>
+        <div class="header-1">
+            <div class="logo">
+                <span></span>Kisan Seva
+            </div>
+
+            <form action="" class="search-bar-container">
+                <input type="search" id="seach-bar" placeholder="search here...">
+                <label for="seach-bar" class="fas fa-search"></label>
+            </form>
+            <div class="login">
+                <a href="#">|  Log in  |</a>
+                <a href="#">|  Sign up |</a>
+            </div>
+        </div>
+
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="yield.html">Crops</a>
+                <a href="#">Fertilizers</a>
+                <a href="#">Shops</a>
+                <a href="goal.html">Goals</a>
+                <a href="#">Contact us</a>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <!-- banner section -->
+        <section class="banner-container">
+            <div class="banner">
+            <h1>"If the roots of agriculture falter the potential</h1>
+            <h2> of everything else to florish is jeopardized."</h2>
+            </div>
+        </section>
+        <!-- banner section end -->
+
+        <!-- feature section -->
+        <section class="features">
+            <div class="feature-1">
+                <a href="{{ url_for('index2') }}"><img src="https://www.devdiscourse.com/remote.axd?https://devdiscourse.blob.core.windows.net/devnews/21_08_2019_16_18_42_6819685.jpg?width=1280"></a>
+<!--                <p id="box1">Crop Yield</p>-->
+                 <div id="box1">Crop Yield</div>
+            </div>
+            <div class="feature-2">
+                <a href="{{ url_for('index') }}"><img src="../static/img3.jpg"></a>
+                <div id="box2">Crop recommendation</div>
+            </div>
+            <div class="feature-2">
+                <a href="{{ url_for('index3') }}"><img src="../static/img3.jpg"></a>
+                <div id="box3">Fertilizer recommendation</div>
+            </div>
+        </section>
+       <!-- feature section end -->
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Your Website. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="disclaimer">
+        </div>
+    </footer>
+</body>
+
+</html>

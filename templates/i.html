@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fertilizer Recommendation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        } 
+        
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e3e2e1a7;
+        }
+
+        .container h1 {
+            text-align: center;
+            color: #416888;
+        }
+
+        hr {
+            border: 1px solid #d0cece;
+            box-shadow: 0, .5rem 1rem black;
+        }
+
+        input[type="text"]{
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 2px solid #6687a2;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #416888;
+            color: #fff;
+            display: block;
+            margin: 0 auto;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #7fa4c2;
+        }
+    </style>
+</head>
+
+<body>
+        <div class="container">
+        <h1>Fertilizer Recommendation System</h1>
+         <hr>
+        <form method="post" action="/predict3">
+            <label>Nitrogen</label><br>
+            <input type="text" name="Nitrogen"><br><br>
+
+            <label>Potassium</label><br>
+            <input type="text" name="Potassium"><br><br>
+
+            <label>Phosphorous</label><br>
+            <input type="text" name="Phosphorous"><br><br>
+
+            <button type="submit" value="predict3">Get Recommendation</button>
+
+            {% if result %}
+            <p>{{ result }}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>

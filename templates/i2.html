@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        } 
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e3e2e1a7;
+        }
+        .container h2 {
+            text-align: center;
+            color: #416888;
+        }
+        hr {
+            border: 1px solid #d0cece;
+            box-shadow: 0, .5rem 1rem black;
+        }
+        p{  
+            text-align: center;
+            font-size: large;
+            font-weight: 550;
+            margin-top: 30px;
+            color: #434648;
+        }
+        .para{
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom:50px;
+        }
+        a{
+            text-decoration: none;
+            text-align: left;
+            color: #fff;
+            background-color: #416888;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a:hover{
+            background-color: #7fa4c2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Predicted result</h2>
+        <hr>
+        <p>{{ result }}</p>
+        <p class="para"></p>
+        <a href="{{ url_for('index_amc') }}">Go Back</a>
+    </div>
+</body>
+</html>
